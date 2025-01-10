@@ -1,0 +1,169 @@
+/* Custom properties */
+
+:root {
+    /* Colors */
+    --verde: hsl(158, 36%, 37%);
+    --crema: hsl(30, 38%, 92%);
+
+    --azulOscuro: hsl(212, 21%, 14%);
+    --grisAzulado: hsl(228, 12%, 48%);
+    --blanco: hsl(0, 0%, 100%);
+
+    /* Typography */
+
+    --fuentePrincipal: "Montserrat", sans-serif;
+    --funteSecundaria: "Fraunces", sans-serif;
+}
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--grisAzulado);
+    background-color: var(--crema);
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor {
+    margin: 2rem auto;
+    width: 90%;
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) { 
+    .contenedor {
+        max-width: 55rem;
+        margin: 15rem auto;
+    }
+}
+
+.card__grid {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+}
+
+@media (min-width: 768px) { 
+    .card__grid {
+        display: grid;
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.card__imagen {
+    border-radius: 1rem;
+}
+
+.card__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+
+@media (min-width: 768px) { 
+    .card__contenido {
+        padding: 1rem 3rem;
+    }
+}
+
+.card__heading1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0;
+    letter-spacing: .5rem;
+}
+
+.card__heading2 {
+    font-family: var(--funteSecundaria);
+    font-size: 2.8rem;
+    line-height: 1;
+    margin: 0;
+    color: var(--azulOscuro);
+}
+
+/* texto */
+.card__texto {
+    margin:0;
+    font-size: 1.3rem;
+}
+
+/* precio */
+
+.card__precios {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card__precio--nuevo {
+    color: var(--verde);
+    font-family: var(--funteSecundaria);
+    font-weight: 900;
+    font-size: 2.6rem;
+    margin: 0;
+}
+
+.card__precio--viejo {
+    font-size: 1rem;
+    margin: 0;
+    text-decoration:line-through ;
+}
+
+
+.card__boton {
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    padding: 1.2rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.card__boton:hover {
+    background-color: hsl(158, 36%, 15%);
+}
+
+.card__boton::before {
+    content: '';
+    display: inline-block;
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+
+
+/* footer */
+.footer {
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.footer a { color: hsl(228, 45%, 44%); }
